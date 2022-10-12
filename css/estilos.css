@@ -5,18 +5,18 @@
 
 body {
     background-color: #1D232A;
-    font-family: 'Open sans','icones', sans-serif;
-    color:#FFFFFF;
+    font-family: 'Open Sans', 'icones', sans-serif;
+    color: #FFFFFF;
 }
 
-@media screen and (min-width: 1440px){
-    body{
+@media screen and (min-width: 1440px) {
+    body {
         display: grid;
         grid-template-columns: auto 1fr;
     }
 }
 
-.cabecalo {
+.cabecalho {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,17 +25,17 @@ body {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
 }
 
-.cabecalo__menu i::before {
+.cabecalho__menu i::before {
     content: "\e904";
     font-size: 24px;
 }
 
-.cabecalo__notificacao i::before {
+.cabecalho__notificacao i::before {
     content: "\e906";
     font-size: 24px;
 }
 
-.cabecalo__logo {
+.cabecalho__logo {
     width: 40px;
 }
 
@@ -43,8 +43,8 @@ body {
     display: none;
 }
 
-@media screen and (min-width: 1440px){
-    .cabecalo {
+@media screen and (min-width: 1440px) {
+    .cabecalho {
         background-color: #1D232A;
         display: grid;
         column-gap: 32px;
@@ -54,12 +54,15 @@ body {
         box-sizing: border-box;
         grid-column: 2;
     }
-    .cabecalo__menu {
+
+    .cabecalho__menu {
         display: none;
     }
-    .cabecalo__logo {
+
+    .cabecalho__logo {
         display: none;
     }
+
     .cabecalho__perfil {
         display: grid;
         grid-template-columns: repeat(3, auto);
@@ -72,11 +75,11 @@ body {
     }
 
     .cabecalho__perfil::before {
-        content:"";
+        content: "";
         display: block;
         width: 32px;
         height: 32px;
-        background-image: url(/img/profile_2.png);
+        background-image: url(../img/profile_2.png);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -91,27 +94,24 @@ body {
 
 .menu-lateral {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-    background-color:#15191C;
+    background-color: #15191C;
     width: 75vw;
     height: 100vh;
+
     position: absolute;
     left: -100vw;
     transition: .25s;
 }
 
-/*menu lateral*/
-
 .menu-lateral--ativo {
-    transition: .25s;
     left: 0;
+    transition: .25s;
 }
 
-
 .menu-lateral__logo {
-    align-self: center;
     width: 118px;
+    align-self: center;
     padding: 16px;
 }
 
@@ -129,8 +129,8 @@ body {
     border-left: 8px solid #FFFFFF;
 }
 
-.menu-lateral__link::before{
-    content: "\e90e";
+.menu-lateral__link::before {
+    content: "\e900";
     width: 24px;
     height: 24px;
     font-size: 24px;
@@ -138,23 +138,27 @@ body {
     left: 24px;
 }
 
-.menu_lateral--inicio::before {
+.menu-lateral__link--inicio::before {
     content: "\e902";
 }
 
-.menu_lateral--videos::before {
+.menu-lateral__link--videos::before {
     content: "\e90e";
 }
-.menu_lateral--picos::before {
+
+.menu-lateral__link--picos::before {
     content: "\e909";
 }
-.menu_lateral--integrantes::before {
+
+.menu-lateral__link--integrantes::before {
     content: "\e903";
 }
-.menu_lateral--camisas::before {
+
+.menu-lateral__link--camisas::before {
     content: "\e900";
 }
-.menu_lateral--pinturas::before {
+
+.menu-lateral__link--pinturas::before {
     content: "\e90a";
 }
 
@@ -164,7 +168,6 @@ body {
         width: 200px;
         grid-column: 1;
         grid-row: 1 / span 2;
-
     }
 }
 
@@ -174,13 +177,13 @@ body {
     gap: 16px;
 }
 
-.titulo-pagina{
+.titulo-pagina {
     font-size: 1.5rem;
     font-weight: 700;
 }
 
-.titula-secao {
-    font-size:1.2rem;
+.titulo-secao {
+    font-size: 1.2rem;
     font-weight: 700;
 }
 
@@ -274,7 +277,7 @@ body {
     display: none;
 }
 
-@media screen and (min-width:1440px){
+@media screen and (min-width: 1440px) {
     .cartao--recentes {
         display: grid;
         grid-template-columns: auto auto;
@@ -284,17 +287,18 @@ body {
         padding: 16px;
         box-sizing: border-box;
     }
+
     .cartao--recentes .cartao__titulo {
-        grid-column:auto;
+        grid-column: auto;
     }
-    
+
     .cartao__link {
         font-size: 0.8rem;
         font-weight: 600;
         color: #0480DC;
         justify-self: flex-end;
     }
-
+    
     .cartao__lista {
         display: grid;
         row-gap: 16px;
@@ -310,7 +314,6 @@ body {
     .cartao__item-thumbnail {
         width: 32px;
         grid-row: span 2;
-
     }
 
     .cartao__item-titulo {
@@ -320,8 +323,8 @@ body {
     }
 
     .cartao__item-perfil {
-        font-size: 0.9rem;
-        color:#95999C;
+        font-size: 0.8rem;
+        color: #95999C;
     }
 }
 
@@ -329,4 +332,3 @@ body {
     display: grid;
     gap: 16px;
 }
-
