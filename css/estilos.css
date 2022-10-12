@@ -103,6 +103,8 @@ body {
 
 .principal {
     padding: 24px 16px;
+    display: grid;
+    gap: 16px;
 }
 
 .titulo-pagina{
@@ -110,11 +112,20 @@ body {
     font-weight: 700;
 }
 
+.titula-secao {
+    font-size:1.2rem;
+    font-weight: 700;
+}
+
 .cartao {
     width: 100%;
     border-radius: 15px;
     overflow: hidden;
-    background-color:#2C343A;
+    background-color: #2C343A;
+}
+
+.cartao--destaque {
+    margin-bottom: 16px;
 }
 
 .cartao__conteudo {
@@ -135,7 +146,7 @@ body {
 }
 
 .cartao__perfil {
-    color:#95999C ;
+    color: #95999C;
     font-size: 0.9rem;
     grid-column: span 2;
 }
@@ -147,24 +158,25 @@ body {
 }
 
 .cartao__info--tempo::before {
-    content:"\e90c";
-    margin-right: 8px;
+    content: "\e90c";
+    margin-right: 8px;    
 }
 
 .cartao__info--visualizacao::before {
-    content:"\e90f";
-    margin-right: 8px;
+    content: "\e90f";
+    margin-right: 8px;    
 }
 
 .cartao__botao {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:#0480DC ;
+    background-color: #0480DC;
     width: 40px;
     height: 40px;
-    border-radius:10px;
+    border-radius: 10px;
     font-size: 0.9rem;
+    justify-self: flex-end;
 }
 
 .cartao__botao--play::before {
@@ -174,9 +186,14 @@ body {
 
 .cartao__botao--destaque {
     width: 100%;
+    grid-column: span 2;
 }
 
 .cartao__botao--destaque::before {
     margin-right: 8px;
-    grid-column: span 2;
 }
+.secao {
+    display: grid;
+    gap: 16px;
+}
+
