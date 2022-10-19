@@ -43,6 +43,10 @@ body {
     display: none;
 }
 
+.btn-group {
+    justify-content: flex-end;
+}
+
 @media screen and (min-width: 1440px) {
     .cabecalho {
         background-color: #1D232A;
@@ -86,7 +90,7 @@ body {
     }
 
     .cabecalho__perfil::after {
-        content: "\e90d";
+        /*content: "\e90d";*/
         color: #FFFFFF;
         font-size: 1.5rem;
     }
@@ -437,3 +441,6 @@ body {
     }
 }
 
+.dropdown-menu {
+    background-color: #efeded;
+}
